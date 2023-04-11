@@ -1,0 +1,33 @@
+<div class="section-search">
+   <input type="text" [(ngModel)]="search"   (keyup)="searMoviesByTitle(search)" placeholder="Search movies by Title."/>
+   
+</div>
+<div class="section-product">
+  <ng-container *ngIf="movies.length>0 ;else NoMoviesFound">
+    <div class="section-content" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-evenly center">
+     
+      <mat-card class="section-card" *ngFor="let movie of movies" (click)="getDetails(movie)">
+        
+        <img mat-card-image [src]="movie.Poster"
+          alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h1>{{movie.Title}}</h1>
+          <p>Year :{{movie.Year}}</p>
+        </mat-card-content>
+        
+      </mat-card>
+    </div>
+  </ng-container>
+  
+
+  <ng-template #NoMoviesFound>
+
+    <div class="container">
+      <h1>Oops!!! </h1>
+      <p>No Result Found with this search.Please try again</p>
+    </div>
+  </ng-template>
+  
+    
+</div>
+ 
