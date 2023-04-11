@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
+
+## Clone Project
+ Use : git clone https://github.com/pradeepdumka/movieapp.git for clone Repository 
+ Require angular Cli for that  plz check https://github.com/angular/angular-cli
+ After Clone run the  npm install from the root folder of the project
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
